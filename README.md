@@ -67,14 +67,6 @@ Clone the repository (if you haven’t already)
 git clone https://github.com/aosnotes77/host-a-static-website-on-aws.git
 cd host-a-static-website-on-aws
 Deploy the infrastructure
-If you’re using Terraform:
-
-terraform init
-terraform apply
-If you’re using CloudFormation:
-
-aws cloudformation deploy --template-file template.yaml --stack-name static-site
-The deployment will create all resources listed above, including the ALB DNS name.
 
 Update DNS
 In Route 53, create an A‑record (alias) that points your domain to the ALB.
@@ -85,10 +77,3 @@ Open your browser and navigate to the domain (or the ALB DNS name). You should s
 Cleanup
 To avoid ongoing charges, destroy the stack when you’re done:
 
-Terraform: terraform destroy
-CloudFormation: aws cloudformation delete-stack --stack-name static-site
-
-License
-This project is provided under the MIT License – see the LICENSE file in the repository for details.
-
-Feel free to edit any section to match your exact naming conventions or add additional details (e.g., IAM roles, monitoring). Happy deploying!
