@@ -1,4 +1,3 @@
-![Alt text](/Host_a_Static_Website_on_AWS_github.png)
 Host a Static Website on AWS
 
 A minimal DevOps project that provisions a highly‑available static web site on Amazon Web Services using core networking, compute, and security services. All infrastructure is defined in the accompanying Terraform/CloudFormation scripts (or manual steps) and the web files live in the linked GitHub repository.
@@ -6,16 +5,23 @@ A minimal DevOps project that provisions a highly‑available static web site on
 Table of Contents
 
 Project Overview
+
 Architecture Diagram
+
 AWS Resources Deployed
+
 Deployment Steps (EC2 User‑Data)
+
 How to Run the Project
+
 Cleanup
+
 Project Overview
+
 The solution creates a VPC with public and private subnets spread across two Availability Zones (AZs). An Application Load Balancer (ALB) distributes traffic to an Auto Scaling Group (ASG) of EC2 instances that host the static site. The instances reside in private subnets and reach the internet through a NAT Gateway. DNS is managed with Route 53, TLS termination is handled by AWS Certificate Manager, and SNS alerts notify you of ASG activity.
 
 Architecture Diagram
-(Insert the diagram you uploaded here – e.g., architecture.png)
+![Alt text](/Host_a_Static_Website_on_AWS_github.png)
 
 AWS Resources Deployed
 Component	Purpose
