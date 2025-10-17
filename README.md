@@ -24,20 +24,34 @@ Architecture Diagram
 ![Alt text](/Host_a_Static_Website_on_AWS_github.png)
 
 AWS Resources Deployed
-Component	Purpose
-VPC	Isolated network with public & private subnets in two AZs
-Internet Gateway	Provides outbound/inbound connectivity for public subnets
-NAT Gateway	Allows private‑subnet instances to reach the internet
-Security Groups	Network‑level firewall for ALB, EC2, and other services
-Application Load Balancer	Terminates TLS, balances traffic across the ASG
-Target Group	Registers EC2 instances for the ALB
-Auto Scaling Group	Manages EC2 instance count for availability & scaling
-EC2 Instance Connect Endpoint	Secure SSH access to instances in both subnets
-EC2 Instances (private)	Host the Apache web server serving the static site
-Certificate Manager	Provides TLS certificate for the domain
-Simple Notification Service (SNS)	Sends alerts on ASG lifecycle events
-Route 53	DNS record pointing the custom domain to the ALB
-Deployment Steps (EC2 User‑Data)
+
+VPC	- Isolated network with public & private subnets in two AZs
+
+Internet Gateway - Provides outbound/inbound connectivity for public subnets
+
+NAT Gateway - Allows private‑subnet instances to reach the internet
+
+Security Groups -	Network‑level firewall for ALB, EC2, and other services
+
+Application Load Balancer -	Terminates TLS, balances traffic across the ASG
+
+Target Group -	Registers EC2 instances for the ALB
+
+Auto Scaling Group -	Manages EC2 instance count for availability & scaling
+
+EC2 Instance Connect Endpoint -	Secure SSH access to instances in both subnets
+
+EC2 Instances (private) -	Host the Apache web server serving the static site
+
+Certificate Manager -	Provides TLS certificate for the domain
+
+Simple Notification Service (SNS) -	Sends alerts on ASG lifecycle events
+
+Route 53 -	DNS record pointing the custom domain to the ALB
+
+
+
+Here is the script used to install the website on the EC2 Instances:
 #!/bin/bash
 # Switch to the root user
 sudo su
