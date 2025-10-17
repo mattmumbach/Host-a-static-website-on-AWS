@@ -1,7 +1,10 @@
+![Alt text](/Host_a_Static_Website_on_AWS_github.png)
 Host a Static Website on AWS
+
 A minimal DevOps project that provisions a highly‑available static web site on Amazon Web Services using core networking, compute, and security services. All infrastructure is defined in the accompanying Terraform/CloudFormation scripts (or manual steps) and the web files live in the linked GitHub repository.
 
 Table of Contents
+
 Project Overview
 Architecture Diagram
 AWS Resources Deployed
